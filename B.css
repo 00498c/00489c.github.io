@@ -1,0 +1,162 @@
+/* -----------------------------------------------------------------------
+타이포그래피 설정
+----------------------------------------------------------------------- */
+
+/* @font-face -> 웹폰트 사용을 위한 지시어(directive) */
+/* html 파일과 같은 폴더에 들어있는 폰트 파일을 사용하는 경우 */
+@font-face {
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HSBombaram21-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/HSBombaram21-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HSBombaram3_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -----------------------------------------------------------------------
+header 영역 - 로고, 메인메뉴
+----------------------------------------------------------------------- */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+}
+
+#head{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: 10000;
+}
+
+#title{
+    font-family: 'HSBombaram21-Regular';
+    font-size: 10vw;
+    background-color: rgb(255, 255, 255);
+}
+#tt2{
+    font-family: 'BookkMyungjo-Bd';
+    font-size: 40px;
+    background-color: rgb(255, 255, 255);
+}
+
+#navmenu {
+    display: flex;
+    position: fixed;
+    bottom: 5px;
+    left: 52%;
+    transform: translateX(-50%);
+    z-index: 10000;
+}
+#navmenu p {
+    margin: 0 20px;
+}
+/* #navmenu 요소에 포함된 a 태그 스타일 설정 */
+#navmenu a {
+    color: #000;
+}
+#navmenu a:link {
+    text-decoration: none;
+}
+#navmenu a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+/*------------------------------------------
+--------------------------------------------*/
+#main-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto; /* 박스(#main-container)를 뷰포트의 가로 방향 가운데로 정렬 */
+    margin-top: 0px;
+    margin-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+    /*background-color: bisque;*/
+}
+#rukawa{
+    font-family: 'IBMPlexSansKR-Regular';
+    position: relative;
+    top: 0px;
+    text-align: center;
+    font-size: 10px;
+}
+#thrid{
+    position: relative;
+    width: 80%;
+    margin-left: 22%;}
+
+#thrid video{
+    flex-basis:50%;
+}
+
+#ball{
+    position: relative;
+    width: 5% ;
+    margin-left: 48%;
+    margin-top: 250px;
+}
+
+#CM{
+    font-family: 'IBMPlexSansKR-Regular';
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 10px;
+}
+
+#frist{
+    position: relative;
+    width: 200px;
+    margin-top: 5%; }
+
+
+
+ @media screen and (max-width: 1024px) {
+        #main-container {
+            width: 90%;
+        }
+    
+        #rukawa {
+            font-size: 12px;
+        }
+    
+        #navmenu {
+            left: 50%;
+            transform: translateX(-50%);
+            justify-content: center;
+            font-size: 10px; 
+        }
+    }

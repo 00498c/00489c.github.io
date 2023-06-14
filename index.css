@@ -1,0 +1,254 @@
+@font-face {
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HSBombaram21-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/HSBombaram21-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HSBombaram3_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BookkMyungjo-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* { /* 모든 HTML 태그에 적용하는 스타일 */
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+}
+
+#head{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: 10000;
+}
+
+#title{
+    font-family: 'HSBombaram21-Regular';
+    font-size: 10vw;
+    background-color: rgb(255, 255, 255);
+}
+#tt2{
+    font-family: 'BookkMyungjo-Bd';
+    font-size: 40px;
+    background-color: rgb(255, 255, 255);
+}
+
+#navmenu {
+    display: flex;
+    position: fixed;
+    bottom: 5px;
+    left: 51%;
+    transform: translateX(-50%);
+    z-index: 10000;
+}
+#navmenu p {
+    margin: 0 20px;
+}
+/* #navmenu 요소에 포함된 a 태그 스타일 설정 */
+#navmenu a {
+    color: #000;
+}
+#navmenu a:link {
+    text-decoration: none;
+}
+#navmenu a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+/*---------------------------------------
+-----------------------------------------*/
+
+#main-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto; /* 박스(#main-container)를 뷰포트의 가로 방향 가운데로 정렬 */
+    margin-top: 0px;
+    margin-bottom: 290px;
+    display: flex;
+    /*background-color: bisque;*/
+}
+
+#main-left{
+    width: 25%;
+
+}
+#main-left >img{
+    width: 85%;
+    padding: 0 30px;
+
+}
+#main-center{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+#main-right{
+    width: 25%;
+
+}
+
+#main-right >img{
+    width: 87%;
+    padding: 0 30px;
+    
+}
+
+#korean{ 
+    font-family: 'OTWelcomeRA';
+    font-size: 40px;
+    font-style: italic ;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#jeapan{
+    font-family: 'OTWelcomeRA';
+    font-size: 60px;
+    color: rgb(157, 157, 157);
+    background-color: blueviolet;
+}
+
+#profile{ 
+    font-family: 'IBMPlexSansKR-Regular';
+    font-size: 18px;
+    text-align: center;
+    
+   }
+/*#picture{
+    position: absolute;
+}
+.picture-item{
+
+   }
+*/
+#name{
+    font-family: 'PyeongChangPeace-Bold';
+    position: relative;
+    font-size: 60px;
+    text-align: center;
+    padding-bottom: 40px;
+    color: rgb(240, 240, 240);
+
+}
+
+/*----------------------------------------------------------
+------------------------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+    #main-container {
+        width: 80%;
+        transform: translateX(30%);
+    }
+    #korean {
+        font-size: 24px;
+    }
+    #name {
+        font-size: 50px;
+
+    }
+
+    #profile {
+        font-size: 18px;
+    }
+
+    #navmenu {
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        font-size: 10px; 
+    }
+    
+    #main-right{
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column; /* flex 메인축을 세로(column) 방향으로 설정 */
+        justify-content: baseline;
+        transform: translateX(-400%);
+        margin-top: 200px;
+        
+    }
+
+    #main-left{
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column; /* flex 메인축을 세로(column) 방향으로 설정 */
+        justify-content:center;
+        transform: translateX(-80%);
+        margin-top: 500px;
+
+    }
+}
+
+/*@media screen and (max-width: 900px) {
+    #head {
+        height: 200px;
+    }
+    #title {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #tt2 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #navmenu {
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+        justify-content: center;
+    }
+    #main-container {
+        width: 90%;
+        font-size: 15px;
+    }
+    #korean {
+        font-size: 30px;
+    }
+    #name {
+        font-size: 24px;
+    }
+    .picture-item{
+       flex-basis: 90%;
+    }
+}*/
